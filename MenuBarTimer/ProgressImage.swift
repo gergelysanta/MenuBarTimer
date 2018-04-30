@@ -75,7 +75,6 @@ class ProgressImage: NSImage {
 	
 	private func initialize() {
 		self.color = NSColor.darkGray
-//		self.isTemplate = true
 	}
 	
 	// MARK: - Custom draw function
@@ -84,19 +83,25 @@ class ProgressImage: NSImage {
 		let imgRect = NSRect(origin: CGPoint.zero, size: size)
 		
 		self.lockFocus()
-		
+		let context = NSGraphicsContext.current?.cgContext
+
 		// Clear the image
 		imgRect.fill(using: NSCompositingOperation.clear)
 		
+		context?.saveGState()
+
 		// Draw background
-		let backgroundPath = NSBezierPath(roundedRect: imgRect, xRadius: cornerRadius, yRadius: cornerRadius)
+		let bezierPath = NSBezierPath(roundedRect: imgRect, xRadius: cornerRadius, yRadius: cornerRadius)
 		progressBackgroundColor.setFill()
-		backgroundPath.fill()
+		bezierPath.fill()
+		
+		context?.clip(to: CGRect(origin: CGPoint.zero, size: CGSize(width: size.width*progress, height: size.height)))
 		
 		// Draw progress bar
-		let progressPath = NSBezierPath(roundedRect: NSRect(origin: CGPoint.zero, size: CGSize(width: size.width*progress, height: size.height)), xRadius: cornerRadius, yRadius: cornerRadius)
 		progressColor.setFill()
-		progressPath.fill()
+		bezierPath.fill()
+		
+		context?.restoreGState()
 		
 		self.unlockFocus()
 	}
