@@ -10,6 +10,7 @@
 		743B9E0B209755F900AC9A64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743B9E0A209755F900AC9A64 /* AppDelegate.swift */; };
 		743B9E0D209755FB00AC9A64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 743B9E0C209755FB00AC9A64 /* Assets.xcassets */; };
 		743B9E10209755FB00AC9A64 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 743B9E0E209755FB00AC9A64 /* MainMenu.xib */; };
+		743B9E19209756E100AC9A64 /* ProgressImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743B9E18209756E100AC9A64 /* ProgressImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,7 +19,7 @@
 		743B9E0C209755FB00AC9A64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		743B9E0F209755FB00AC9A64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		743B9E11209755FB00AC9A64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		743B9E12209755FB00AC9A64 /* MenuBarTimer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MenuBarTimer.entitlements; sourceTree = "<group>"; };
+		743B9E18209756E100AC9A64 /* ProgressImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,10 +53,10 @@
 			isa = PBXGroup;
 			children = (
 				743B9E0A209755F900AC9A64 /* AppDelegate.swift */,
+				743B9E18209756E100AC9A64 /* ProgressImage.swift */,
 				743B9E0C209755FB00AC9A64 /* Assets.xcassets */,
 				743B9E0E209755FB00AC9A64 /* MainMenu.xib */,
 				743B9E11209755FB00AC9A64 /* Info.plist */,
-				743B9E12209755FB00AC9A64 /* MenuBarTimer.entitlements */,
 			);
 			path = MenuBarTimer;
 			sourceTree = "<group>";
@@ -92,6 +93,11 @@
 				TargetAttributes = {
 					743B9E06209755F900AC9A64 = {
 						CreatedOnToolsVersion = 9.3;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -130,6 +136,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				743B9E19209756E100AC9A64 /* ProgressImage.swift in Sources */,
 				743B9E0B209755F900AC9A64 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,7 +272,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = MenuBarTimer/MenuBarTimer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = MenuBarTimer/Info.plist;
@@ -283,7 +289,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = MenuBarTimer/MenuBarTimer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = MenuBarTimer/Info.plist;
