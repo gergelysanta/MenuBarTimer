@@ -20,7 +20,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	func applicationDidFinishLaunching(_ aNotification: Notification) {
 		
 		// Customize status bar item
-		let timerProgress = ProgressImage(size: NSSize(width: 24.0, height: 16.0))
+		let timerProgress = ProgressImage()
 		timerProgress.isTemplate = true
 		
 		statusItem.button?.image = timerProgress
