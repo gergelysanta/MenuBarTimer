@@ -11,67 +11,60 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 	
-	@IBOutlet weak var window: NSWindow!
-	@IBOutlet weak var imageView: NSImageView!
+	@IBOutlet weak var statusMenu: NSMenu!
+	@IBOutlet weak var startMenuItem: NSMenuItem!
+	@IBOutlet weak var stopMenuItem: NSMenuItem!
+	@IBOutlet weak var pauseMenuItem: NSMenuItem!
 	
-	let statusItem = NSStatusBar.system.statusItem(withLength: 76)
-//	let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
+	let menuTimer = MenuTimer()
+	let progressImage = ProgressImage()
 
+	let statusItem = NSStatusBar.system.statusItem(withLength: 76)	// or: NSStatusItem.variableLength
+	
 	func applicationDidFinishLaunching(_ aNotification: Notification) {
 		
-		// Customize status bar item
-		let timerProgress = ProgressImage()
-		timerProgress.isTemplate = true
+		menuTimer.delegate = self
+		progressImage.isTemplate = true
 		
-		statusItem.button?.image = timerProgress
-		statusItem.button?.title = "Timer"
+		statusItem.button?.image = progressImage
+		statusItem.button?.title = "0%"
+		statusItem.menu = statusMenu
 		statusItem.button?.imagePosition = .imageLeft
 		
-		// Add progress to main window
-		let progressImage = ProgressImage(size: NSSize(width: 100.0, height: 20.0))
-		
-		let fromColor = NSColor(red: 0.7, green: 0.7, blue: 0.7, alpha: 1.0)
-		var toColors:[NSColor] = [
-			NSColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 1.0),
-			NSColor(red: 0.0, green: 1.0, blue: 0.0, alpha: 1.0),
-			NSColor(red: 0.0, green: 0.0, blue: 1.0, alpha: 1.0)
-		]
-		var toColor:NSColor = toColors.removeFirst()
-
-		progressImage.progress = 0.0
-		progressImage.color = fromColor
-		
-		imageView.image = progressImage
-		
-		Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true) { (timer) in
-			if progressImage.progress == 1.0 {
-				if toColors.count > 0 {
-					toColor = toColors.removeFirst()
-					timerProgress.progress = 0.0
-					progressImage.progress = 0.0
-				}
-				else {
-					timer.invalidate()
-				}
-			}
-
-			timerProgress.progress += 0.001
-			self.statusItem.button?.title = String(format: "%.0f%%", timerProgress.progress*100)
-
-			progressImage.progress += 0.001
-			progressImage.color = NSColor(red: fromColor.redComponent + ((toColor.redComponent - fromColor.redComponent) * progressImage.progress),
-										  green: fromColor.greenComponent + ((toColor.greenComponent - fromColor.greenComponent) * progressImage.progress),
-										  blue: fromColor.blueComponent + ((toColor.blueComponent - fromColor.blueComponent) * progressImage.progress),
-										  alpha: fromColor.alphaComponent + ((toColor.alphaComponent - fromColor.alphaComponent) * progressImage.progress))
-			
-			self.imageView.needsDisplay = true
-			self.statusItem.button?.needsDisplay = true
-		}
+		actualizeStatus()
 	}
 	
-	func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
-		return true
+	@IBAction func menuItemSelected(_ sender: NSMenuItem) {
+		if sender == startMenuItem {
+			menuTimer.start(forSeconds: 15.0)
+		}
+		else if sender == stopMenuItem {
+			menuTimer.stop()
+		}
+		else if sender == pauseMenuItem {
+			menuTimer.togglePause()
+		}
+		actualizeStatus()
+	}
+	
+	func actualizeStatus() {
+		// Actualize status item
+		statusItem.button?.title = String(format: "%.0f%%", menuTimer.progress*100)
+		progressImage.progress = menuTimer.progress
+		statusItem.button?.needsDisplay = true
+		// Actualize menu item labels
+		startMenuItem.title = menuTimer.running ? "Restart" : "Start"
+		stopMenuItem.action = menuTimer.running ? #selector(menuItemSelected(_:)) : nil
+		pauseMenuItem.title = menuTimer.paused ? "Resume" : "Pause"
+		pauseMenuItem.action = menuTimer.running ? #selector(menuItemSelected(_:)) : nil
 	}
 	
 }
 
+extension AppDelegate: MenuTimerDelegate {
+	
+	func tick(timer: MenuTimer) {
+		actualizeStatus()
+	}
+	
+}
