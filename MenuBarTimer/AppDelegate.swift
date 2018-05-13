@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import ProgressImage
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
