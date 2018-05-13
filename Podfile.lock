@@ -1,0 +1,16 @@
+PODS:
+  - ProgressImage (0.1.1)
+
+DEPENDENCIES:
+  - ProgressImage
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - ProgressImage
+
+SPEC CHECKSUMS:
+  ProgressImage: 73f4baf5714b407d5b09eae37891c4855d78147a
+
+PODFILE CHECKSUM: ca52cd12059186dfe49db33700bddb8183f3d6b6
+
+COCOAPODS: 1.5.2
