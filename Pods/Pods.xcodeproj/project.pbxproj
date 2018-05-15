@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0B343F6623522CB49D74F9D571350D2F /* ProgressImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65DFEA30114D2515B2EC5EBD35C9D1C /* ProgressImage.swift */; };
 		407C05ED40349FE7A60AD928CF830630 /* Pods-MenuBarTimer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 47A65E391CEC561D91EE33B0FBB8855F /* Pods-MenuBarTimer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		55A5E926FE70DF1F2DF75C920CC38DEB /* ProgressImage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 55AC901D5F3DF9AFD5735DF36D9EB211 /* ProgressImage-dummy.m */; };
+		61D829B0EC2B19AE50E71D0AD0D095C7 /* ProgressImage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F6CEA25116F9BC6B866EA83216968DD5 /* ProgressImage-dummy.m */; };
+		681826183C14AEF97934B6B72D5F796D /* ProgressImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5307EF82A46A19B193B5265D784F67 /* ProgressImageView.swift */; };
 		9C9903273067F2A87EED12136C0D93C6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF428FC7C7A6555B2B02D8E238C8D8F2 /* Cocoa.framework */; };
+		9CD723785B0685D8F43701935FA085A2 /* ProgressImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46480E9F6E10004EE7210427288F9FC /* ProgressImage.swift */; };
 		A0400C1E38CB2AADABE87C94A937DE1C /* Pods-MenuBarTimer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BA757846DD01D739BCC6D823A99F9FA6 /* Pods-MenuBarTimer-dummy.m */; };
-		BAD48CDF4458256AD94AA34172239F02 /* ProgressImage-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ABB3864ED1C0DA3D799297EFCD604B85 /* ProgressImage-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BAD48CDF4458256AD94AA34172239F02 /* ProgressImage-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 58B3AB479C41052F3E5080255D33AEEE /* ProgressImage-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C26B85E078FF3E35373F2BE2F19A96DD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF428FC7C7A6555B2B02D8E238C8D8F2 /* Cocoa.framework */; };
+		DF808CD4D6190A5BC25A873AB2AF9A57 /* ProgressMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B91A0A5B147F4AEA007D622053E0AE /* ProgressMenuItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,27 +29,29 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0EA9603B9E6F1BE24DFD65344D97C8D7 /* ProgressImage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ProgressImage.xcconfig; sourceTree = "<group>"; };
 		1028BA7E11C514615D1FD746DD238488 /* Pods-MenuBarTimer-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MenuBarTimer-acknowledgements.plist"; sourceTree = "<group>"; };
 		14F35321AA31BA0DD08F1A31DFB56A4F /* Pods-MenuBarTimer-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MenuBarTimer-frameworks.sh"; sourceTree = "<group>"; };
+		218A7B94FE1181BE712992BAFAFC3927 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26BDBDA6888D41C24F5EEBD203338B08 /* ProgressImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ProgressImage.framework; path = ProgressImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		29F7A45B8620964A05309C27E975B530 /* ProgressImage-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ProgressImage-prefix.pch"; sourceTree = "<group>"; };
 		47A65E391CEC561D91EE33B0FBB8855F /* Pods-MenuBarTimer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MenuBarTimer-umbrella.h"; sourceTree = "<group>"; };
 		49C75CF436E36F9918FD88C4A23A472D /* Pods-MenuBarTimer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MenuBarTimer.release.xcconfig"; sourceTree = "<group>"; };
-		55AC901D5F3DF9AFD5735DF36D9EB211 /* ProgressImage-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ProgressImage-dummy.m"; sourceTree = "<group>"; };
-		5CFF42A3679E8879D820E7FE92B71961 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58B3AB479C41052F3E5080255D33AEEE /* ProgressImage-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ProgressImage-umbrella.h"; sourceTree = "<group>"; };
 		6330E88DE33C9891258971E66FC1236D /* Pods-MenuBarTimer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MenuBarTimer.modulemap"; sourceTree = "<group>"; };
+		8C5307EF82A46A19B193B5265D784F67 /* ProgressImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProgressImageView.swift; path = Source/ProgressImageView.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		ABB3864ED1C0DA3D799297EFCD604B85 /* ProgressImage-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ProgressImage-umbrella.h"; sourceTree = "<group>"; };
 		AC159E3C44AE72F8420315A8E924A894 /* Pods-MenuBarTimer-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MenuBarTimer-resources.sh"; sourceTree = "<group>"; };
+		AE851D92B9AA85862DECE5CC6780D44B /* ProgressImage.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ProgressImage.modulemap; sourceTree = "<group>"; };
 		B201D53FC8C9D5B87008DC0CCBAAC6C5 /* Pods_MenuBarTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MenuBarTimer.framework; path = "Pods-MenuBarTimer.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B4231FE09DECF6A793CE1F226B75D536 /* ProgressImage.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ProgressImage.modulemap; sourceTree = "<group>"; };
+		B46480E9F6E10004EE7210427288F9FC /* ProgressImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProgressImage.swift; path = Source/ProgressImage.swift; sourceTree = "<group>"; };
 		B57C903785B3DF9EA142E0BC17835FA9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B81347152D741614508A37D57F75598F /* Pods-MenuBarTimer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MenuBarTimer.debug.xcconfig"; sourceTree = "<group>"; };
 		BA757846DD01D739BCC6D823A99F9FA6 /* Pods-MenuBarTimer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MenuBarTimer-dummy.m"; sourceTree = "<group>"; };
 		CC49378EE95EBD8736CC7EF26EE37345 /* Pods-MenuBarTimer-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MenuBarTimer-acknowledgements.markdown"; sourceTree = "<group>"; };
 		DF428FC7C7A6555B2B02D8E238C8D8F2 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
-		E65DFEA30114D2515B2EC5EBD35C9D1C /* ProgressImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProgressImage.swift; path = ProgressImage/Classes/ProgressImage.swift; sourceTree = "<group>"; };
+		E1C370FA72CA141A41A60EB92B9C768B /* ProgressImage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ProgressImage.xcconfig; sourceTree = "<group>"; };
+		E7FE5F7C04C6336BFF7E649F6558C12B /* ProgressImage-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ProgressImage-prefix.pch"; sourceTree = "<group>"; };
+		F3B91A0A5B147F4AEA007D622053E0AE /* ProgressMenuItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProgressMenuItem.swift; path = Source/ProgressMenuItem.swift; sourceTree = "<group>"; };
+		F6CEA25116F9BC6B866EA83216968DD5 /* ProgressImage-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ProgressImage-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,20 @@
 			path = "Target Support Files/Pods-MenuBarTimer";
 			sourceTree = "<group>";
 		};
+		37AA93025371A52369B371FD8A6CEB3E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				218A7B94FE1181BE712992BAFAFC3927 /* Info.plist */,
+				AE851D92B9AA85862DECE5CC6780D44B /* ProgressImage.modulemap */,
+				E1C370FA72CA141A41A60EB92B9C768B /* ProgressImage.xcconfig */,
+				F6CEA25116F9BC6B866EA83216968DD5 /* ProgressImage-dummy.m */,
+				E7FE5F7C04C6336BFF7E649F6558C12B /* ProgressImage-prefix.pch */,
+				58B3AB479C41052F3E5080255D33AEEE /* ProgressImage-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ProgressImage";
+			sourceTree = "<group>";
+		};
 		39E9EE8210D861DFD82346C1F5EB7218 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -96,18 +114,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		4F85E383A97385DB5D5FEB8C51840A75 /* Support Files */ = {
+		534D92E113205B0F291471A601500724 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				5CFF42A3679E8879D820E7FE92B71961 /* Info.plist */,
-				B4231FE09DECF6A793CE1F226B75D536 /* ProgressImage.modulemap */,
-				0EA9603B9E6F1BE24DFD65344D97C8D7 /* ProgressImage.xcconfig */,
-				55AC901D5F3DF9AFD5735DF36D9EB211 /* ProgressImage-dummy.m */,
-				29F7A45B8620964A05309C27E975B530 /* ProgressImage-prefix.pch */,
-				ABB3864ED1C0DA3D799297EFCD604B85 /* ProgressImage-umbrella.h */,
+				E5D494A540C848A2E0AEF6CD2D34CB75 /* ProgressImage */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/ProgressImage";
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		6D2820C7285BBFA8652298ADFEE365BC /* Products */ = {
@@ -124,18 +136,10 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				39E9EE8210D861DFD82346C1F5EB7218 /* Frameworks */,
-				9A5CF0407CDE50027C2D3DCA5F2F5FF8 /* Pods */,
+				534D92E113205B0F291471A601500724 /* Pods */,
 				6D2820C7285BBFA8652298ADFEE365BC /* Products */,
 				D5750F071370BCE3D28886830546CC94 /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		9A5CF0407CDE50027C2D3DCA5F2F5FF8 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				F8CA4AF13FC47574E441B2144D02B0EF /* ProgressImage */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		D5750F071370BCE3D28886830546CC94 /* Targets Support Files */ = {
@@ -146,11 +150,13 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		F8CA4AF13FC47574E441B2144D02B0EF /* ProgressImage */ = {
+		E5D494A540C848A2E0AEF6CD2D34CB75 /* ProgressImage */ = {
 			isa = PBXGroup;
 			children = (
-				E65DFEA30114D2515B2EC5EBD35C9D1C /* ProgressImage.swift */,
-				4F85E383A97385DB5D5FEB8C51840A75 /* Support Files */,
+				B46480E9F6E10004EE7210427288F9FC /* ProgressImage.swift */,
+				8C5307EF82A46A19B193B5265D784F67 /* ProgressImageView.swift */,
+				F3B91A0A5B147F4AEA007D622053E0AE /* ProgressMenuItem.swift */,
+				37AA93025371A52369B371FD8A6CEB3E /* Support Files */,
 			);
 			name = ProgressImage;
 			path = ProgressImage;
@@ -190,7 +196,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 53399C5EC83017B39F479ADD1FC973CD /* Build configuration list for PBXNativeTarget "ProgressImage" */;
 			buildPhases = (
-				0FF89DC646665CC89297659C0A4ED1E0 /* Sources */,
+				23101B68F8EB6FE8005B73C08A4AA731 /* Sources */,
 				F108412BDC91E201D4406D263F82BE02 /* Frameworks */,
 				098F437544915A7607F3A1289A140BE1 /* Headers */,
 			);
@@ -249,12 +255,14 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0FF89DC646665CC89297659C0A4ED1E0 /* Sources */ = {
+		23101B68F8EB6FE8005B73C08A4AA731 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55A5E926FE70DF1F2DF75C920CC38DEB /* ProgressImage-dummy.m in Sources */,
-				0B343F6623522CB49D74F9D571350D2F /* ProgressImage.swift in Sources */,
+				61D829B0EC2B19AE50E71D0AD0D095C7 /* ProgressImage-dummy.m in Sources */,
+				9CD723785B0685D8F43701935FA085A2 /* ProgressImage.swift in Sources */,
+				681826183C14AEF97934B6B72D5F796D /* ProgressImageView.swift in Sources */,
+				DF808CD4D6190A5BC25A873AB2AF9A57 /* ProgressMenuItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,7 +324,7 @@
 		};
 		0C843F544FCD5F31A07BBCBFD09BD33F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0EA9603B9E6F1BE24DFD65344D97C8D7 /* ProgressImage.xcconfig */;
+			baseConfigurationReference = E1C370FA72CA141A41A60EB92B9C768B /* ProgressImage.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -408,7 +416,7 @@
 		};
 		747D66FB9F3ECF4243CAA84614995228 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0EA9603B9E6F1BE24DFD65344D97C8D7 /* ProgressImage.xcconfig */;
+			baseConfigurationReference = E1C370FA72CA141A41A60EB92B9C768B /* ProgressImage.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
