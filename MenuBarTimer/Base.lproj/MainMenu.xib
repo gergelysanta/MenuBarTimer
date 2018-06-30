@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14109" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14113" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14109"/>
-        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -11,63 +10,8 @@
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application"/>
-        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="MenuBarTimer" customModuleProvider="target">
-            <connections>
-                <outlet property="pauseMenuItem" destination="mEB-b0-aIo" id="UMh-JE-f9Q"/>
-                <outlet property="startMenuItem" destination="meZ-2K-X2y" id="xdY-Qp-g3d"/>
-                <outlet property="statusMenu" destination="Vyj-lS-3zG" id="C2f-1V-91S"/>
-                <outlet property="stopMenuItem" destination="w2E-yH-H5b" id="vZ1-JA-EYB"/>
-            </connections>
-        </customObject>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="MenuBarTimer" customModuleProvider="target"/>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
-        <menu id="Vyj-lS-3zG">
-            <items>
-                <menuItem title="Start" id="meZ-2K-X2y">
-                    <modifierMask key="keyEquivalentModifierMask"/>
-                    <connections>
-                        <action selector="menuItemSelected:" target="Voe-Tx-rLC" id="0pT-XK-oGE"/>
-                    </connections>
-                </menuItem>
-                <menuItem title="Stop" id="w2E-yH-H5b">
-                    <modifierMask key="keyEquivalentModifierMask"/>
-                    <connections>
-                        <action selector="menuItemSelected:" target="Voe-Tx-rLC" id="2q9-Ol-Xw2"/>
-                    </connections>
-                </menuItem>
-                <menuItem title="Pause" id="mEB-b0-aIo">
-                    <modifierMask key="keyEquivalentModifierMask"/>
-                    <connections>
-                        <action selector="menuItemSelected:" target="Voe-Tx-rLC" id="rII-e1-I4c"/>
-                    </connections>
-                </menuItem>
-                <menuItem isSeparatorItem="YES" id="Yxc-2d-2BH"/>
-                <menuItem title="Setup" id="eue-P3-tw6">
-                    <modifierMask key="keyEquivalentModifierMask"/>
-                    <connections>
-                        <action selector="makeKeyAndOrderFront:" target="Wnt-Ej-dId" id="nPB-pO-uQy"/>
-                    </connections>
-                </menuItem>
-                <menuItem isSeparatorItem="YES" id="sBd-In-V8Q"/>
-                <menuItem title="Quit" id="vKq-1Y-uWZ">
-                    <modifierMask key="keyEquivalentModifierMask"/>
-                    <connections>
-                        <action selector="terminate:" target="-3" id="SU2-hn-7S8"/>
-                    </connections>
-                </menuItem>
-            </items>
-            <point key="canvasLocation" x="-131" y="-119.5"/>
-        </menu>
-        <window title="Timer Setup" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" titlebarAppearsTransparent="YES" titleVisibility="hidden" id="Wnt-Ej-dId">
-            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
-            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="109" y="131" width="304" height="150"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
-            <view key="contentView" id="m3J-SA-Fc0">
-                <rect key="frame" x="0.0" y="0.0" width="304" height="150"/>
-                <autoresizingMask key="autoresizingMask"/>
-            </view>
-            <point key="canvasLocation" x="-25" y="107"/>
-        </window>
     </objects>
 </document>

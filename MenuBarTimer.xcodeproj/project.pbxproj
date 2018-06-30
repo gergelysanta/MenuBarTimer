@@ -11,7 +11,10 @@
 		743B9E0D209755FB00AC9A64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 743B9E0C209755FB00AC9A64 /* Assets.xcassets */; };
 		743B9E10209755FB00AC9A64 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 743B9E0E209755FB00AC9A64 /* MainMenu.xib */; };
 		743B9E1D209A0E4F00AC9A64 /* MenuTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743B9E1C209A0E4F00AC9A64 /* MenuTimer.swift */; };
+		746F042E20E772C600EBC0C9 /* OnlyIntegerValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746F042D20E772C600EBC0C9 /* OnlyIntegerValueFormatter.swift */; };
 		74E3DDD320A8600D0093C267 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 74E3DDD220A8600D0093C267 /* README.md */; };
+		74E3DDDC20AF0E780093C267 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E3DDDA20AF0E780093C267 /* MenuViewController.swift */; };
+		74E3DDDD20AF0E780093C267 /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74E3DDDB20AF0E780093C267 /* MenuView.xib */; };
 		832575FC796B766E40C94FDA /* Pods_MenuBarTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B98F158E63C4C9866391557 /* Pods_MenuBarTimer.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,7 +26,10 @@
 		743B9E0F209755FB00AC9A64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		743B9E11209755FB00AC9A64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		743B9E1C209A0E4F00AC9A64 /* MenuTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTimer.swift; sourceTree = "<group>"; };
+		746F042D20E772C600EBC0C9 /* OnlyIntegerValueFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlyIntegerValueFormatter.swift; sourceTree = "<group>"; };
 		74E3DDD220A8600D0093C267 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		74E3DDDA20AF0E780093C267 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		74E3DDDB20AF0E780093C267 /* MenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuView.xib; sourceTree = "<group>"; };
 		8B98F158E63C4C9866391557 /* Pods_MenuBarTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MenuBarTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED9DF1A727BD3340BEF86CCE /* Pods-MenuBarTimer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MenuBarTimer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MenuBarTimer/Pods-MenuBarTimer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,6 +77,9 @@
 			isa = PBXGroup;
 			children = (
 				743B9E0A209755F900AC9A64 /* AppDelegate.swift */,
+				74E3DDDA20AF0E780093C267 /* MenuViewController.swift */,
+				746F042D20E772C600EBC0C9 /* OnlyIntegerValueFormatter.swift */,
+				74E3DDDB20AF0E780093C267 /* MenuView.xib */,
 				743B9E1C209A0E4F00AC9A64 /* MenuTimer.swift */,
 				743B9E0C209755FB00AC9A64 /* Assets.xcassets */,
 				743B9E0E209755FB00AC9A64 /* MainMenu.xib */,
@@ -156,6 +165,7 @@
 				74E3DDD320A8600D0093C267 /* README.md in Resources */,
 				743B9E0D209755FB00AC9A64 /* Assets.xcassets in Resources */,
 				743B9E10209755FB00AC9A64 /* MainMenu.xib in Resources */,
+				74E3DDDD20AF0E780093C267 /* MenuView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,6 +216,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				743B9E0B209755F900AC9A64 /* AppDelegate.swift in Sources */,
+				746F042E20E772C600EBC0C9 /* OnlyIntegerValueFormatter.swift in Sources */,
+				74E3DDDC20AF0E780093C267 /* MenuViewController.swift in Sources */,
 				743B9E1D209A0E4F00AC9A64 /* MenuTimer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

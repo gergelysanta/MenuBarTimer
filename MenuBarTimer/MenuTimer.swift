@@ -10,6 +10,10 @@ import Foundation
 
 protocol MenuTimerDelegate {
 	func tick(timer:MenuTimer)
+	func timerEnded(timer:MenuTimer)
+	func timerStarted(timer:MenuTimer)
+	func timerStopped(timer:MenuTimer)
+	func timerPauseToggled(timer:MenuTimer, paused:Bool)
 }
 
 class MenuTimer {
@@ -61,6 +65,7 @@ class MenuTimer {
 										  userInfo: nil,
 										  repeats: true)
 
+		self.delegate?.timerStarted(timer: self)
 		return true
 	}
 	
@@ -69,6 +74,7 @@ class MenuTimer {
 			innerTimer?.invalidate()
 			innerTimer = nil
 			progress = 0.0
+			self.delegate?.timerStopped(timer: self)
 		}
 	}
 	
@@ -83,6 +89,7 @@ class MenuTimer {
 		else {
 			innerTimer?.invalidate()
 		}
+		self.delegate?.timerPauseToggled(timer: self, paused: paused)
 	}
 	
 	@objc private func timerTick(_ timer: Timer) {
@@ -91,7 +98,9 @@ class MenuTimer {
 		self.delegate?.tick(timer: self)
 		
 		if self.iterationsLeft <= 0 {
-			timer.invalidate()
+			innerTimer?.invalidate()
+			innerTimer = nil
+			self.delegate?.timerEnded(timer: self)
 		}
 	}
 	

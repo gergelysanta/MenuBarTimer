@@ -12,40 +12,57 @@ import ProgressImage
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 	
-	@IBOutlet weak var statusMenu: NSMenu!
-	@IBOutlet weak var startMenuItem: NSMenuItem!
-	@IBOutlet weak var stopMenuItem: NSMenuItem!
-	@IBOutlet weak var pauseMenuItem: NSMenuItem!
-	
 	let menuTimer = MenuTimer()
 	let progressImage = ProgressImage()
 
 	let statusItem = NSStatusBar.system.statusItem(withLength: 76)	// or: NSStatusItem.variableLength
+	let menuController = MenuViewController()
 	
 	func applicationDidFinishLaunching(_ aNotification: Notification) {
 		
-		menuTimer.delegate = self
+		// Set progressimage as template so it will invert colors when selected and also in dark mode
 		progressImage.isTemplate = true
 		
+		// Add status button
 		statusItem.button?.image = progressImage
 		statusItem.button?.title = "0%"
-		statusItem.menu = statusMenu
 		statusItem.button?.imagePosition = .imageLeft
+		statusItem.button?.action = #selector(statusButtonPressed(_:))
+		statusItem.button?.sendAction(on: [ .leftMouseUp, .rightMouseUp ])
 		
+		// Set AppDelegate as timer's delegate
+		menuTimer.delegate = self
+		
+		// Actualize visuals
 		actualizeStatus()
 	}
 	
-	@IBAction func menuItemSelected(_ sender: NSMenuItem) {
-		if sender == startMenuItem {
-			menuTimer.start(forSeconds: 15.0)
+	@objc func statusButtonPressed(_ sender: NSStatusBarButton) {
+		
+		if let event = NSApp.currentEvent,
+			let statusButton = statusItem.button
+		{
+			if	event.modifierFlags.contains(.option) ||
+				event.modifierFlags.contains(.control) ||
+				event.modifierFlags.contains(.command) ||
+				event.type == .rightMouseUp
+			{
+				let popover = NSPopover()
+				popover.contentViewController = menuController
+				popover.behavior = .transient
+				popover.show(relativeTo: statusButton.frame, of: statusButton, preferredEdge: .maxY)
+				return
+			}
 		}
-		else if sender == stopMenuItem {
-			menuTimer.stop()
+		
+		if !menuTimer.running {
+			NSLog("Start")
+			menuTimer.start(forSeconds: 10.0)
 		}
-		else if sender == pauseMenuItem {
+		else {
+			NSLog("Toggle")
 			menuTimer.togglePause()
 		}
-		actualizeStatus()
 	}
 	
 	func actualizeStatus() {
@@ -53,11 +70,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		statusItem.button?.title = String(format: "%.0f%%", menuTimer.progress*100)
 		progressImage.progress = menuTimer.progress
 		statusItem.button?.needsDisplay = true
-		// Actualize menu item labels
-		startMenuItem.title = menuTimer.running ? "Restart" : "Start"
-		stopMenuItem.action = menuTimer.running ? #selector(menuItemSelected(_:)) : nil
-		pauseMenuItem.title = menuTimer.paused ? "Resume" : "Pause"
-		pauseMenuItem.action = menuTimer.running ? #selector(menuItemSelected(_:)) : nil
 	}
 	
 }
@@ -65,7 +77,36 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 extension AppDelegate: MenuTimerDelegate {
 	
 	func tick(timer: MenuTimer) {
+		menuController.progress = timer.progress
 		actualizeStatus()
+	}
+	
+	func timerStarted(timer: MenuTimer) {
+		#if DEBUG
+			NSLog("Timer started...")
+		#endif
+		menuController.configurationView(show: false)
+	}
+	
+	func timerEnded(timer: MenuTimer) {
+		#if DEBUG
+			NSLog("Timer ended...")
+		#endif
+		menuController.configurationView(show: true)
+	}
+	
+	func timerStopped(timer: MenuTimer) {
+		#if DEBUG
+			NSLog("Timer stopped...")
+		#endif
+		menuController.configurationView(show: true)
+		actualizeStatus()
+	}
+	
+	func timerPauseToggled(timer: MenuTimer, paused: Bool) {
+		#if DEBUG
+			NSLog("Timer %@...", paused ? "paused" : "resumed")
+		#endif
 	}
 	
 }
