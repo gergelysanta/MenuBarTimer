@@ -18,6 +18,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	let statusItem = NSStatusBar.system.statusItem(withLength: 76)	// or: NSStatusItem.variableLength
 	let menuController = MenuViewController()
 	
+	private var timeStamp: String {
+		get {
+			return "\(Date().timeIntervalSince1970 * 1000)"
+		}
+	}
+	
 	func applicationDidFinishLaunching(_ aNotification: Notification) {
 		
 		// Set progressimage as template so it will invert colors when selected and also in dark mode
@@ -56,11 +62,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		}
 		
 		if !menuTimer.running {
-			NSLog("Start")
 			menuTimer.start(forSeconds: 10.0)
 		}
 		else {
-			NSLog("Toggle")
 			menuTimer.togglePause()
 		}
 	}
@@ -70,6 +74,79 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		statusItem.button?.title = String(format: "%.0f%%", menuTimer.progress*100)
 		progressImage.progress = menuTimer.progress
 		statusItem.button?.needsDisplay = true
+	}
+	
+	func showAlert(message: String, type: NSAlert.Style = .warning) {
+		let alertDialog = NSAlert()
+		alertDialog.alertStyle = type
+		alertDialog.informativeText = message
+		switch type {
+		case .critical:
+			alertDialog.messageText = "Critical error"
+		case .informational:
+			alertDialog.messageText = "Information"
+		case .warning:
+			alertDialog.messageText = "Warning"
+		}
+		alertDialog.runModal()
+	}
+	
+	func notify(title: String, subtitle: String?, message: String) {
+		
+		checkNotificationSettings()
+		
+		// Create notification with requested texts
+		let notification = NSUserNotification()
+		notification.title = title
+		notification.subtitle = subtitle
+		notification.informativeText = message
+		
+		// Set UNIQUE identifier
+		// If identifier is not unique and notification with this ID was already delivered
+		// to notification center, this notification won't be displayed.
+		// Note that NotificationCenter is system-wide, so the old notification could be
+		// delivered by other process (by older instance of gui-agent for example)
+		notification.identifier = "ESNotification.\(timeStamp)"
+		
+		// Deliver the notification
+		NSUserNotificationCenter.default.deliver(notification)
+	}
+	
+	private func checkNotificationSettings() {
+		guard let bundleId = Bundle.main.bundleIdentifier else { return }
+		let path = "\(NSHomeDirectory())/Library/Preferences/com.apple.ncprefs.plist"
+		if let dict = NSDictionary(contentsOfFile: path) as? [String: Any],
+			let appsArray = dict["apps"] as? [[String: Any]]
+		{
+			for app in appsArray {
+				if let appBundleID = app["bundle-id"] as? String,
+					let appFlags = app["flags"] as? Int,
+					appBundleID == bundleId
+				{
+					// decimal binary
+					// 70      0000 0000 0100 0110    when notification bubbles are disabled ('None' set) - default value in this case
+					// 78      0000 0000 0100 1110    when notification banners are enabled
+					//                        ^
+					// 86      0000 0000 0101 0110    when notification alerts are enabled
+					//                      ^
+					// 4166    0001 0000 0100 0110    when notifications on lock screen are disabled
+					//            ^
+					// 71      0000 0000 0100 0111    when "Show in notification Center" is disabled
+					//                           ^
+					// 68      0000 0000 0100 0100    when "Badge app icon" is disabled
+					//                          ^
+					// 66      0000 0000 0100 0010    when "Play sound for notifications" is disabled\
+					//                         ^
+					if appFlags & 0b11000 == 0 {
+						showAlert(message: "Notifications are disabled for MenuBarTimer.\nGo to 'System Preferences' -> 'Notifications' and set alert style to 'Banners' or 'Alerts' for MenuBarTimer")
+					}
+					else if appFlags & 0b1 == 1 {
+						showAlert(message: "MenuBarTimer should be enabled to show in Notification Center.\nGo to 'System Preferences' -> 'Notifications' and check 'Show in Notification Center' for MenuBarTimer")
+					}
+					break
+				}
+			}
+		}
 	}
 	
 }
@@ -93,6 +170,7 @@ extension AppDelegate: MenuTimerDelegate {
 			NSLog("Timer ended...")
 		#endif
 		menuController.configurationView(show: true)
+		self.notify(title: "Timer ended", subtitle: nil, message: "Your timer run out! Now take the consequences!")
 	}
 	
 	func timerStopped(timer: MenuTimer) {
