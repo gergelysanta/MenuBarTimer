@@ -14,6 +14,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	
 	let menuTimer = MenuTimer()
 	let progressImage = ProgressImage()
+	let pauseImage = NSImage(named: NSImage.Name("Pause"))?.copy() as? NSImage
 
 	let statusItem = NSStatusBar.system.statusItem(withLength: 76)	// or: NSStatusItem.variableLength
 	let menuController = MenuViewController()
@@ -28,6 +29,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		
 		// Set progressimage as template so it will invert colors when selected and also in dark mode
 		progressImage.isTemplate = true
+		
+		// Resize pause image
+		pauseImage?.resizingMode = .stretch
+		pauseImage?.size = progressImage.size
 		
 		// Add status button
 		statusItem.button?.image = progressImage
@@ -162,6 +167,7 @@ extension AppDelegate: MenuTimerDelegate {
 		#if DEBUG
 			NSLog("Timer started...")
 		#endif
+		statusItem.button?.image = progressImage
 		menuController.configurationView(show: false)
 	}
 	
@@ -177,6 +183,7 @@ extension AppDelegate: MenuTimerDelegate {
 		#if DEBUG
 			NSLog("Timer stopped...")
 		#endif
+		statusItem.button?.image = progressImage
 		menuController.configurationView(show: true)
 		actualizeStatus()
 	}
@@ -185,6 +192,7 @@ extension AppDelegate: MenuTimerDelegate {
 		#if DEBUG
 			NSLog("Timer %@...", paused ? "paused" : "resumed")
 		#endif
+		statusItem.button?.image = paused ? pauseImage : progressImage
 	}
 	
 }
