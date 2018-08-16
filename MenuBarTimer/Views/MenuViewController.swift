@@ -112,6 +112,18 @@ class MenuViewController: NSViewController {
 		}
 	}
 	
+	override func viewWillAppear() {
+		super.viewWillAppear()
+		actualizeControls()
+		progressImageView.progress = _progress
+		progressLabel.stringValue = String(format: "%.0f %%", _progress * 100.0)
+		
+		// Hide advanced settings if visible
+		if self.mainConstraint.constant > self.basicConfigurationHeight {
+			mainConstraint.constant = basicConfigurationHeight
+		}
+	}
+	
 	private func animatePreferencesImages(_ animate: Bool) {
 		if animate && (prefsImagesAnimationTimer != nil) {
 			// Animation already running
@@ -146,13 +158,6 @@ class MenuViewController: NSViewController {
 			prefsImagesAnimationTimer?.invalidate()
 			prefsImagesAnimationTimer = nil
 		}
-	}
-	
-	override func viewWillAppear() {
-		super.viewWillAppear()
-		actualizeControls()
-		progressImageView.progress = _progress
-		progressLabel.stringValue = String(format: "%.0f %%", _progress * 100.0)
 	}
 	
 	private func actualizeControls() {
