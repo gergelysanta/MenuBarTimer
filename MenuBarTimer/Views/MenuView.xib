@@ -15,6 +15,7 @@
                 <outlet property="prefsImageHorizontal" destination="d7h-kC-zKa" id="0A3-gR-QZl"/>
                 <outlet property="prefsImagePie" destination="Q3M-Af-mIq" id="hBi-nB-vLz"/>
                 <outlet property="prefsImageVertical" destination="nVp-Co-4UU" id="J6q-Ai-uJf"/>
+                <outlet property="prefsTrayTypeCheckboxesView" destination="rGK-Xb-bA5" id="lMe-UZ-KZU"/>
                 <outlet property="progressImageView" destination="pPg-KG-Sws" id="dN8-n8-dqM"/>
                 <outlet property="progressLabel" destination="s1U-Yw-oCW" id="vso-J9-815"/>
                 <outlet property="startStopButton" destination="zOz-sX-nvc" id="Ec1-aL-SFA"/>
@@ -157,7 +158,7 @@
                         <rect key="frame" x="2" y="2" width="298" height="40"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wYT-t5-BQ7">
+                            <button identifier="trayTypeHorizontal" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wYT-t5-BQ7">
                                 <rect key="frame" x="15" y="7" width="66" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="pRM-4D-V1h"/>
@@ -182,7 +183,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
-                            <button verticalHuggingPriority="750" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="Fk0-go-KVT">
+                            <button identifier="trayTypeVertical" verticalHuggingPriority="750" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="Fk0-go-KVT">
                                 <rect key="frame" x="86" y="7" width="65" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="z7z-bC-MrR"/>
@@ -207,7 +208,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
-                            <button verticalHuggingPriority="750" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="DrO-Xf-11J">
+                            <button identifier="trayTypePie" verticalHuggingPriority="750" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="DrO-Xf-11J">
                                 <rect key="frame" x="156" y="7" width="66" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="xFA-nM-hUW"/>
@@ -244,7 +245,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
-                            <button verticalHuggingPriority="750" tag="3" translatesAutoresizingMaskIntoConstraints="NO" id="oAt-BK-Ll5">
+                            <button identifier="trayTypeArc" verticalHuggingPriority="750" tag="3" translatesAutoresizingMaskIntoConstraints="NO" id="oAt-BK-Ll5">
                                 <rect key="frame" x="227" y="7" width="65" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="Bcq-p4-OGD"/>

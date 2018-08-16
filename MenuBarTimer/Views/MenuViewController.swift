@@ -18,6 +18,7 @@ class MenuViewController: NSViewController {
 	@IBOutlet weak var mainConstraint: NSLayoutConstraint!
 	
 	// Preferences
+	@IBOutlet weak var prefsTrayTypeCheckboxesView: NSView!
 	@IBOutlet weak var prefsImageHorizontal: ProgressImageView!
 	@IBOutlet weak var prefsImageVertical: ProgressImageView!
 	@IBOutlet weak var prefsImagePie: ProgressImageView!
@@ -79,6 +80,11 @@ class MenuViewController: NSViewController {
 		super.init(coder: coder)
 	}
 	
+	private func getComponent(identifier: String) -> NSView? {
+		let components = prefsTrayTypeCheckboxesView.subviews.filter { $0.identifier?.rawValue == identifier }
+		return components.first
+	}
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
@@ -93,6 +99,17 @@ class MenuViewController: NSViewController {
 		prefsImageVertical.type = .vertical
 		prefsImagePie.type = .pie
 		prefsImageArc.type = .arc
+		
+		switch Configuration.shared.trayType {
+		case 1:
+			(getComponent(identifier: "trayTypeVertical") as? NSButton)?.state = .on
+		case 2:
+			(getComponent(identifier: "trayTypePie") as? NSButton)?.state = .on
+		case 3:
+			(getComponent(identifier: "trayTypeArc") as? NSButton)?.state = .on
+		default:
+			(getComponent(identifier: "trayTypeHorizontal") as? NSButton)?.state = .on
+		}
 	}
 	
 	private func animatePreferencesImages(_ animate: Bool) {

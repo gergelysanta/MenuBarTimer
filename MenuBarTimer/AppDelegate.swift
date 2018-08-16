@@ -78,6 +78,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		// Actualize status item
 		statusItem.button?.title = String(format: "%.0f%%", menuTimer.progress*100)
 		progressImage.type = ProgressImage.ProgressType(rawValue: Configuration.shared.trayType) ?? .horizontal
+		if progressImage.type == .horizontal {
+			progressImage.size = ProgressImage.defaultSize
+		}
+		else {
+			progressImage.size = NSSize(width: progressImage.size.height, height: progressImage.size.height)
+		}
 		progressImage.progress = menuTimer.progress
 		statusItem.button?.needsDisplay = true
 	}
