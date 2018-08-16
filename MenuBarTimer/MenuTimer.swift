@@ -49,12 +49,18 @@ class MenuTimer {
 	private var iterationsLeft:Int = 0
 	private var innerTimer:Timer?
 	
-	@discardableResult func start(forSeconds interval:CGFloat) -> Bool {
+	private(set) var secondsTotal:Int = 0
+	var secondsLeft:Int {
+		return iterationsLeft / iterationsPerSecond
+	}
+	
+	@discardableResult func start(forSeconds interval:Int) -> Bool {
 		if running {
 			stop()
 		}
 		
-		iterationsLeft = Int(interval/precision)
+		secondsTotal = interval
+		iterationsLeft = Int(CGFloat(interval)/precision)
 		
 		progress = 0.0
 		progressIncrement = 1.0 / CGFloat(iterationsLeft)

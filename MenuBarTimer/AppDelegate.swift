@@ -67,7 +67,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		}
 		
 		if !menuTimer.running {
-			menuTimer.start(forSeconds: 10.0)
+			menuTimer.start(forSeconds: Configuration.shared.timerSeconds)
 		}
 		else {
 			menuTimer.togglePause()
@@ -77,6 +77,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	func actualizeStatus() {
 		// Actualize status item
 		statusItem.button?.title = String(format: "%.0f%%", menuTimer.progress*100)
+		progressImage.type = ProgressImage.ProgressType(rawValue: Configuration.shared.trayType) ?? .horizontal
 		progressImage.progress = menuTimer.progress
 		statusItem.button?.needsDisplay = true
 	}
@@ -165,7 +166,7 @@ extension AppDelegate: MenuTimerDelegate {
 	
 	func timerStarted(timer: MenuTimer) {
 		#if DEBUG
-			NSLog("Timer started...")
+			NSLog("Timer started for \(timer.secondsTotal) seconds...")
 		#endif
 		statusItem.button?.image = progressImage
 		menuController.configurationView(show: false)

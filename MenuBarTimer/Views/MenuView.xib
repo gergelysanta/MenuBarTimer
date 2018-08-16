@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14113" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="box content view" minToolsVersion="7.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="MenuViewController" customModule="MenuBarTimer" customModuleProvider="target">
+            <connections>
+                <outlet property="basicConfigurationConstraint" destination="zr0-Dw-W8Z" id="51A-qf-Bzx"/>
+                <outlet property="mainConstraint" destination="dVO-BE-TyB" id="tTl-Lm-OqY"/>
+                <outlet property="prefsImageArc" destination="Rh5-Ib-eLU" id="Zum-A5-0n1"/>
+                <outlet property="prefsImageHorizontal" destination="d7h-kC-zKa" id="0A3-gR-QZl"/>
+                <outlet property="prefsImagePie" destination="Q3M-Af-mIq" id="hBi-nB-vLz"/>
+                <outlet property="prefsImageVertical" destination="nVp-Co-4UU" id="J6q-Ai-uJf"/>
+                <outlet property="progressImageView" destination="pPg-KG-Sws" id="dN8-n8-dqM"/>
+                <outlet property="progressLabel" destination="s1U-Yw-oCW" id="vso-J9-815"/>
+                <outlet property="startStopButton" destination="zOz-sX-nvc" id="Ec1-aL-SFA"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="312" height="150"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <imageView verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pPg-KG-Sws" customClass="ProgressImageView" customModule="ProgressImage">
+                    <rect key="frame" x="8" y="118" width="240" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="24" id="N7S-ml-qzL"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="iHq-L4-gEq"/>
+                </imageView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="s1U-Yw-oCW">
+                    <rect key="frame" x="107" y="122" width="42" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="38" id="x0d-3x-LSV"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Label" id="Uvf-7I-1uF">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button translatesAutoresizingMaskIntoConstraints="NO" id="zOz-sX-nvc">
+                    <rect key="frame" x="252" y="118" width="24" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="zOz-sX-nvc" secondAttribute="height" multiplier="1:1" id="ZrX-5u-J6I"/>
+                    </constraints>
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="Play" imagePosition="only" alignment="center" alternateImage="Pause" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="FjW-X6-0U9">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="playPauseButtonPressed:" target="-2" id="YUL-LK-UI7"/>
+                        <binding destination="-2" name="enabled" keyPath="self.timerAvailable" id="HQY-aJ-UCp"/>
+                    </connections>
+                </button>
+                <button translatesAutoresizingMaskIntoConstraints="NO" id="5NW-Dc-Axh">
+                    <rect key="frame" x="280" y="118" width="24" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="5NW-Dc-Axh" secondAttribute="height" multiplier="1:1" id="B4p-M1-DV4"/>
+                    </constraints>
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="Stop" imagePosition="only" alignment="center" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="UMJ-lH-uge">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="stopButtonPressed:" target="-2" id="2wm-Gl-H9R"/>
+                    </connections>
+                </button>
+                <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="taR-3v-SlN">
+                    <rect key="frame" x="8" y="107" width="296" height="5"/>
+                </box>
+                <customView verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Wlx-8L-Id0">
+                    <rect key="frame" x="8" y="79" width="267" height="22"/>
+                    <subviews>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="TRS-24-i9p">
+                            <rect key="frame" x="-2" y="3" width="83" height="17"/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Run timer for" id="FZE-zD-Fug">
+                                <font key="font" metaFont="system"/>
+                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                        <textField focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EIc-BQ-wfH">
+                            <rect key="frame" x="85" y="0.0" width="42" height="22"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="42" id="KEW-ff-Gtt"/>
+                            </constraints>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" focusRingType="none" alignment="right" title="9999" drawsBackground="YES" id="zjl-xJ-DR7">
+                                <numberFormatter key="formatter" formatterBehavior="default10_4" usesGroupingSeparator="NO" groupingSize="0" minimumIntegerDigits="0" maximumIntegerDigits="42" id="leq-uJ-t4Z" customClass="OnlyIntegerValueFormatter" customModule="MenuBarTimer" customModuleProvider="target"/>
+                                <font key="font" metaFont="system"/>
+                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                            <connections>
+                                <binding destination="-2" name="value" keyPath="self.startTimerWithSeconds" id="o4O-CC-KyU">
+                                    <dictionary key="options">
+                                        <bool key="NSContinuouslyUpdatesValue" value="YES"/>
+                                    </dictionary>
+                                </binding>
+                                <outlet property="delegate" destination="-2" id="6rA-WC-SbR"/>
+                            </connections>
+                        </textField>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Xdh-qU-zxf">
+                            <rect key="frame" x="146" y="3" width="56" height="17"/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="seconds" id="poT-sW-l1M">
+                                <font key="font" metaFont="system"/>
+                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                        <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3Jf-MG-wD7">
+                            <rect key="frame" x="126" y="-2" width="19" height="27"/>
+                            <stepperCell key="cell" continuous="YES" alignment="left" maxValue="9999" id="BJT-on-07M"/>
+                            <connections>
+                                <binding destination="-2" name="value" keyPath="self.startTimerWithSeconds" id="one-1W-dx9"/>
+                            </connections>
+                        </stepper>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="Xdh-qU-zxf" firstAttribute="leading" secondItem="3Jf-MG-wD7" secondAttribute="trailing" constant="6" id="7Zm-MM-9pn"/>
+                        <constraint firstItem="3Jf-MG-wD7" firstAttribute="centerY" secondItem="TRS-24-i9p" secondAttribute="centerY" id="7pP-dI-ehk"/>
+                        <constraint firstItem="TRS-24-i9p" firstAttribute="leading" secondItem="Wlx-8L-Id0" secondAttribute="leading" id="HKC-o9-4K8"/>
+                        <constraint firstItem="3Jf-MG-wD7" firstAttribute="leading" secondItem="EIc-BQ-wfH" secondAttribute="trailing" constant="2" id="MeW-oF-Fej"/>
+                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Xdh-qU-zxf" secondAttribute="trailing" id="NXH-ft-Y4Z"/>
+                        <constraint firstAttribute="bottom" secondItem="EIc-BQ-wfH" secondAttribute="bottom" id="NgX-b0-Sdd"/>
+                        <constraint firstItem="EIc-BQ-wfH" firstAttribute="centerY" secondItem="TRS-24-i9p" secondAttribute="centerY" id="QFn-SN-Qph"/>
+                        <constraint firstItem="EIc-BQ-wfH" firstAttribute="top" secondItem="Wlx-8L-Id0" secondAttribute="top" id="Xw5-Ie-yiJ"/>
+                        <constraint firstItem="EIc-BQ-wfH" firstAttribute="leading" secondItem="TRS-24-i9p" secondAttribute="trailing" constant="6" id="ZSt-gC-Ily"/>
+                        <constraint firstItem="Xdh-qU-zxf" firstAttribute="centerY" secondItem="TRS-24-i9p" secondAttribute="centerY" id="sS3-Oz-lwZ"/>
+                    </constraints>
+                </customView>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="q4q-dz-J1X">
+                    <rect key="frame" x="283" y="74" width="21" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="q4q-dz-J1X" secondAttribute="height" multiplier="2:3" id="1DM-IK-saD"/>
+                    </constraints>
+                    <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="NSSmartBadgeTemplate" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="Wv5-OA-mKh">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="preferencesButtonPressed:" target="-2" id="yZv-HV-vix"/>
+                    </connections>
+                </button>
+                <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="0G7-3R-h9i">
+                    <rect key="frame" x="8" y="68" width="296" height="5"/>
+                </box>
+                <box title="Tray progressbar style" titlePosition="belowTop" translatesAutoresizingMaskIntoConstraints="NO" id="9fE-RH-fa0">
+                    <rect key="frame" x="5" y="4" width="302" height="60"/>
+                    <view key="contentView" id="rGK-Xb-bA5">
+                        <rect key="frame" x="2" y="2" width="298" height="40"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wYT-t5-BQ7">
+                                <rect key="frame" x="15" y="7" width="66" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="pRM-4D-V1h"/>
+                                </constraints>
+                                <buttonCell key="cell" type="radio" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="JnR-HP-3YZ">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="trayStyleButtonPressed:" target="-2" id="dzm-jO-dij"/>
+                                </connections>
+                            </button>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d7h-kC-zKa" customClass="ProgressImageView" customModule="ProgressImage">
+                                <rect key="frame" x="40" y="8" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="d7h-kC-zKa" secondAttribute="height" multiplier="1:1" id="Ak9-nd-qbH"/>
+                                </constraints>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="Afz-iE-4fL"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="typeVal">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <button verticalHuggingPriority="750" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="Fk0-go-KVT">
+                                <rect key="frame" x="86" y="7" width="65" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="z7z-bC-MrR"/>
+                                </constraints>
+                                <buttonCell key="cell" type="radio" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="3Ak-Do-u1e">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="trayStyleButtonPressed:" target="-2" id="fNt-8p-ccA"/>
+                                </connections>
+                            </button>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nVp-Co-4UU" customClass="ProgressImageView" customModule="ProgressImage">
+                                <rect key="frame" x="111" y="8" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="nVp-Co-4UU" secondAttribute="height" multiplier="1:1" id="TcG-U5-ysd"/>
+                                </constraints>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="BF5-cy-hcX"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="typeVal">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <button verticalHuggingPriority="750" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="DrO-Xf-11J">
+                                <rect key="frame" x="156" y="7" width="66" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="xFA-nM-hUW"/>
+                                </constraints>
+                                <buttonCell key="cell" type="radio" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="CXi-VI-MGk">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="trayStyleButtonPressed:" target="-2" id="eqP-sF-nzl"/>
+                                </connections>
+                            </button>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q3M-Af-mIq" customClass="ProgressImageView" customModule="ProgressImage">
+                                <rect key="frame" x="181" y="8" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Q3M-Af-mIq" secondAttribute="height" multiplier="1:1" id="4J5-uN-d2V"/>
+                                </constraints>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="Yno-3t-Drl"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="typeVal">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rh5-Ib-eLU" customClass="ProgressImageView" customModule="ProgressImage">
+                                <rect key="frame" x="252" y="8" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Rh5-Ib-eLU" secondAttribute="height" multiplier="1:1" id="KMC-Oa-2EU"/>
+                                </constraints>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="q0n-7x-XiV"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="typeVal">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <button verticalHuggingPriority="750" tag="3" translatesAutoresizingMaskIntoConstraints="NO" id="oAt-BK-Ll5">
+                                <rect key="frame" x="227" y="7" width="65" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="Bcq-p4-OGD"/>
+                                </constraints>
+                                <buttonCell key="cell" type="radio" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="c13-9B-L90">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="trayStyleButtonPressed:" target="-2" id="2We-L8-LZq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Q3M-Af-mIq" firstAttribute="height" secondItem="DrO-Xf-11J" secondAttribute="height" id="3gj-Y9-Arh"/>
+                            <constraint firstItem="nVp-Co-4UU" firstAttribute="width" secondItem="nVp-Co-4UU" secondAttribute="height" multiplier="1:1" id="3mL-RC-gda"/>
+                            <constraint firstItem="wYT-t5-BQ7" firstAttribute="leading" secondItem="rGK-Xb-bA5" secondAttribute="leading" constant="16" id="4Sg-fF-Sta"/>
+                            <constraint firstItem="Q3M-Af-mIq" firstAttribute="leading" secondItem="DrO-Xf-11J" secondAttribute="leading" constant="24" id="708-d4-jBI"/>
+                            <constraint firstItem="oAt-BK-Ll5" firstAttribute="centerY" secondItem="Rh5-Ib-eLU" secondAttribute="centerY" id="73T-YM-hge"/>
+                            <constraint firstItem="d7h-kC-zKa" firstAttribute="leading" secondItem="wYT-t5-BQ7" secondAttribute="leading" constant="24" id="7qC-sT-CYm"/>
+                            <constraint firstAttribute="bottom" secondItem="oAt-BK-Ll5" secondAttribute="bottom" constant="8" id="FSe-Xx-5dD"/>
+                            <constraint firstItem="oAt-BK-Ll5" firstAttribute="leading" secondItem="DrO-Xf-11J" secondAttribute="trailing" constant="8" id="Lfb-Ml-GBy"/>
+                            <constraint firstItem="DrO-Xf-11J" firstAttribute="width" secondItem="wYT-t5-BQ7" secondAttribute="width" id="N7Y-iI-bu5"/>
+                            <constraint firstItem="wYT-t5-BQ7" firstAttribute="centerY" secondItem="d7h-kC-zKa" secondAttribute="centerY" id="OKh-Ia-3Is"/>
+                            <constraint firstItem="nVp-Co-4UU" firstAttribute="leading" secondItem="Fk0-go-KVT" secondAttribute="leading" constant="24" id="Ppj-LT-ZEJ"/>
+                            <constraint firstItem="nVp-Co-4UU" firstAttribute="width" secondItem="nVp-Co-4UU" secondAttribute="height" multiplier="1:1" id="Qmb-qT-kO1"/>
+                            <constraint firstItem="DrO-Xf-11J" firstAttribute="centerY" secondItem="Q3M-Af-mIq" secondAttribute="centerY" id="T0W-MO-O5z"/>
+                            <constraint firstItem="Fk0-go-KVT" firstAttribute="top" secondItem="rGK-Xb-bA5" secondAttribute="top" constant="8" id="VT2-h6-IDh"/>
+                            <constraint firstItem="oAt-BK-Ll5" firstAttribute="top" secondItem="rGK-Xb-bA5" secondAttribute="top" constant="8" id="Ybi-jQ-k2U"/>
+                            <constraint firstItem="Q3M-Af-mIq" firstAttribute="width" secondItem="Q3M-Af-mIq" secondAttribute="height" multiplier="1:1" id="bgq-bQ-Thx"/>
+                            <constraint firstItem="d7h-kC-zKa" firstAttribute="width" secondItem="d7h-kC-zKa" secondAttribute="height" multiplier="1:1" id="byf-px-CJK"/>
+                            <constraint firstItem="Rh5-Ib-eLU" firstAttribute="leading" secondItem="oAt-BK-Ll5" secondAttribute="leading" constant="24" id="c9l-aa-yo1"/>
+                            <constraint firstItem="nVp-Co-4UU" firstAttribute="height" secondItem="Fk0-go-KVT" secondAttribute="height" id="fSn-PD-oJv"/>
+                            <constraint firstItem="Fk0-go-KVT" firstAttribute="leading" secondItem="wYT-t5-BQ7" secondAttribute="trailing" constant="8" id="hrU-Xb-Lgw"/>
+                            <constraint firstItem="d7h-kC-zKa" firstAttribute="height" secondItem="wYT-t5-BQ7" secondAttribute="height" id="kTU-2o-33c"/>
+                            <constraint firstItem="DrO-Xf-11J" firstAttribute="top" secondItem="rGK-Xb-bA5" secondAttribute="top" constant="8" id="mW4-qE-gcE"/>
+                            <constraint firstAttribute="trailing" secondItem="oAt-BK-Ll5" secondAttribute="trailing" constant="8" id="p0n-5Q-O9r"/>
+                            <constraint firstItem="Rh5-Ib-eLU" firstAttribute="height" secondItem="oAt-BK-Ll5" secondAttribute="height" id="peS-Zx-sKz"/>
+                            <constraint firstAttribute="bottom" secondItem="DrO-Xf-11J" secondAttribute="bottom" constant="8" id="qAE-iO-Rtc"/>
+                            <constraint firstItem="wYT-t5-BQ7" firstAttribute="top" secondItem="rGK-Xb-bA5" secondAttribute="top" constant="8" id="rUD-SM-Q6I"/>
+                            <constraint firstItem="oAt-BK-Ll5" firstAttribute="width" secondItem="wYT-t5-BQ7" secondAttribute="width" id="tvH-Oe-X3a"/>
+                            <constraint firstItem="DrO-Xf-11J" firstAttribute="leading" secondItem="Fk0-go-KVT" secondAttribute="trailing" constant="8" id="uuv-EX-ohS"/>
+                            <constraint firstAttribute="bottom" secondItem="wYT-t5-BQ7" secondAttribute="bottom" constant="8" id="wdo-xq-eNM"/>
+                            <constraint firstItem="Fk0-go-KVT" firstAttribute="centerY" secondItem="nVp-Co-4UU" secondAttribute="centerY" id="xhi-Xz-wxR"/>
+                            <constraint firstItem="Fk0-go-KVT" firstAttribute="width" secondItem="wYT-t5-BQ7" secondAttribute="width" id="xvq-Qi-rgr"/>
+                            <constraint firstAttribute="bottom" secondItem="Fk0-go-KVT" secondAttribute="bottom" constant="8" id="yZf-dP-fCw"/>
+                        </constraints>
+                    </view>
+                </box>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="taR-3v-SlN" secondAttribute="trailing" constant="8" id="1KB-wz-ntW"/>
+                <constraint firstItem="Wlx-8L-Id0" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="8" id="3Sj-Cm-HfY"/>
+                <constraint firstItem="5NW-Dc-Axh" firstAttribute="bottom" secondItem="pPg-KG-Sws" secondAttribute="bottom" id="4Mz-hU-WwU"/>
+                <constraint firstItem="5NW-Dc-Axh" firstAttribute="top" secondItem="pPg-KG-Sws" secondAttribute="top" id="5ss-Sh-nnP"/>
+                <constraint firstItem="zOz-sX-nvc" firstAttribute="top" secondItem="pPg-KG-Sws" secondAttribute="top" id="9yh-MB-rdJ"/>
+                <constraint firstItem="zOz-sX-nvc" firstAttribute="leading" secondItem="pPg-KG-Sws" secondAttribute="trailing" constant="4" id="CxD-LA-W3f"/>
+                <constraint firstItem="9fE-RH-fa0" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="8" id="GPW-rQ-gjX"/>
+                <constraint firstItem="taR-3v-SlN" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="8" id="IYe-17-Ie0"/>
+                <constraint firstAttribute="trailing" secondItem="9fE-RH-fa0" secondAttribute="trailing" constant="8" id="KRa-zE-bmm"/>
+                <constraint firstAttribute="trailing" secondItem="q4q-dz-J1X" secondAttribute="trailing" constant="8" id="Kwj-w4-PpW"/>
+                <constraint firstItem="0G7-3R-h9i" firstAttribute="top" secondItem="Wlx-8L-Id0" secondAttribute="bottom" constant="8" id="R4z-oy-RBb"/>
+                <constraint firstItem="taR-3v-SlN" firstAttribute="top" secondItem="pPg-KG-Sws" secondAttribute="bottom" constant="8" id="TLv-y2-mZD"/>
+                <constraint firstAttribute="trailing" secondItem="5NW-Dc-Axh" secondAttribute="trailing" constant="8" id="Wt5-kd-lyI"/>
+                <constraint firstItem="9fE-RH-fa0" firstAttribute="top" secondItem="0G7-3R-h9i" secondAttribute="bottom" constant="8" id="Zev-zN-WvA"/>
+                <constraint firstItem="0G7-3R-h9i" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="8" id="aDv-pc-Ivc"/>
+                <constraint firstItem="pPg-KG-Sws" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="8" id="cEd-x8-ZrC"/>
+                <constraint firstAttribute="bottom" secondItem="pPg-KG-Sws" secondAttribute="bottom" constant="118" id="dVO-BE-TyB"/>
+                <constraint firstItem="zOz-sX-nvc" firstAttribute="bottom" secondItem="pPg-KG-Sws" secondAttribute="bottom" id="eQP-Wt-M8a"/>
+                <constraint firstItem="q4q-dz-J1X" firstAttribute="leading" secondItem="Wlx-8L-Id0" secondAttribute="trailing" constant="8" id="f31-cK-fXc"/>
+                <constraint firstItem="s1U-Yw-oCW" firstAttribute="centerY" secondItem="pPg-KG-Sws" secondAttribute="centerY" id="gTP-cS-d2C"/>
+                <constraint firstAttribute="trailing" secondItem="0G7-3R-h9i" secondAttribute="trailing" constant="8" id="hyt-nn-i6i"/>
+                <constraint firstItem="Wlx-8L-Id0" firstAttribute="top" secondItem="taR-3v-SlN" secondAttribute="bottom" constant="8" id="j3E-11-mBv"/>
+                <constraint firstItem="5NW-Dc-Axh" firstAttribute="leading" secondItem="zOz-sX-nvc" secondAttribute="trailing" constant="4" id="lum-8c-06H"/>
+                <constraint firstItem="s1U-Yw-oCW" firstAttribute="centerX" secondItem="pPg-KG-Sws" secondAttribute="centerX" id="pJF-Sh-o5R"/>
+                <constraint firstItem="pPg-KG-Sws" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="8" id="pJq-H8-w9e"/>
+                <constraint firstItem="q4q-dz-J1X" firstAttribute="centerY" secondItem="Wlx-8L-Id0" secondAttribute="centerY" id="zcb-7U-pP3"/>
+                <constraint firstItem="0G7-3R-h9i" firstAttribute="top" secondItem="taR-3v-SlN" secondAttribute="bottom" priority="250" constant="38" id="zr0-Dw-W8Z"/>
+            </constraints>
+            <point key="canvasLocation" x="37" y="253.5"/>
+        </customView>
+        <userDefaultsController representsSharedInstance="YES" id="lTb-Ld-btP"/>
+    </objects>
+    <resources>
+        <image name="NSSmartBadgeTemplate" width="14" height="14"/>
+        <image name="Pause" width="30" height="30"/>
+        <image name="Play" width="30" height="30"/>
+        <image name="Stop" width="30" height="30"/>
+    </resources>
+</document>
