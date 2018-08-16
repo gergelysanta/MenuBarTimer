@@ -93,7 +93,8 @@ class MenuViewController: NSViewController {
 		basicConfigurationHeight = basicConfigurationConstraint.constant + allHiddenHeight
 		wholeConfigurationHeight = mainConstraint.constant
 		
-		mainConstraint.constant = basicConfigurationHeight
+		actualizeControls()
+		mainConstraint.constant = timerRunning ? allHiddenHeight : basicConfigurationHeight
 		
 		prefsImageHorizontal.type = .horizontal
 		prefsImageVertical.type = .vertical
