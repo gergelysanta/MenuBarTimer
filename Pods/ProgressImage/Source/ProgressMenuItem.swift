@@ -7,6 +7,7 @@
 
 import Cocoa
 
+@IBDesignable
 public class ProgressMenuItem: NSMenuItem {
 	
 	// MARK: - Public overrided properties
@@ -30,12 +31,15 @@ public class ProgressMenuItem: NSMenuItem {
 		}
 	}
 	
-	public var type = ProgressImage.ProgressType.horizontal {
-		didSet {
-			self.progressImage?.type = type
+	public var type:ProgressImage.ProgressType {
+		get {
+			return progressImage?.type ?? ProgressImage.defaultType
+		}
+		set {
+			progressImage?.type = newValue
 		}
 	}
-	
+
 	public var progress:CGFloat? {
 		get {
 			return progressImage?.progress
@@ -46,7 +50,17 @@ public class ProgressMenuItem: NSMenuItem {
 			}
 		}
 	}
-	
+
+	@IBInspectable
+	public var showPercentage:Bool {
+		get {
+			return progressImage?.showPercentage ?? false
+		}
+		set {
+			progressImage?.showPercentage = newValue
+		}
+	}
+
 	@available(*, unavailable, message: "This property is reserved for Interface Builder. Use 'type' instead.")
 	@IBInspectable var typeVal: Int = 0 {
 		willSet {
@@ -65,12 +79,12 @@ public class ProgressMenuItem: NSMenuItem {
 	
 	override init(title string: String, action selector: Selector?, keyEquivalent charCode: String) {
 		super.init(title: string, action: selector, keyEquivalent: charCode)
-		self.initialize(withType: .horizontal)
+		self.initialize(withType: ProgressImage.defaultType)
 	}
 	
 	required public init(coder decoder: NSCoder) {
 		super.init(coder: decoder)
-		self.initialize(withType: .horizontal)
+		self.initialize(withType: ProgressImage.defaultType)
 	}
 	
 	private func initialize(withType type: ProgressImage.ProgressType) {

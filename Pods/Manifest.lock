@@ -1,5 +1,5 @@
 PODS:
-  - ProgressImage (0.2.2)
+  - ProgressImage (0.3.0)
 
 DEPENDENCIES:
   - ProgressImage
@@ -9,8 +9,8 @@ SPEC REPOS:
     - ProgressImage
 
 SPEC CHECKSUMS:
-  ProgressImage: fafd822f55e64130ccffab2ec7b3102be4f3a19d
+  ProgressImage: 2779016849ded392e23f8d6cb35e25fe42d9de18
 
 PODFILE CHECKSUM: ca52cd12059186dfe49db33700bddb8183f3d6b6
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.0.beta.2

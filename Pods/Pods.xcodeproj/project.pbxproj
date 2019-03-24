@@ -3,123 +3,115 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		407C05ED40349FE7A60AD928CF830630 /* Pods-MenuBarTimer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 47A65E391CEC561D91EE33B0FBB8855F /* Pods-MenuBarTimer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		61D829B0EC2B19AE50E71D0AD0D095C7 /* ProgressImage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F6CEA25116F9BC6B866EA83216968DD5 /* ProgressImage-dummy.m */; };
-		681826183C14AEF97934B6B72D5F796D /* ProgressImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5307EF82A46A19B193B5265D784F67 /* ProgressImageView.swift */; };
-		9C9903273067F2A87EED12136C0D93C6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF428FC7C7A6555B2B02D8E238C8D8F2 /* Cocoa.framework */; };
-		9CD723785B0685D8F43701935FA085A2 /* ProgressImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46480E9F6E10004EE7210427288F9FC /* ProgressImage.swift */; };
-		A0400C1E38CB2AADABE87C94A937DE1C /* Pods-MenuBarTimer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BA757846DD01D739BCC6D823A99F9FA6 /* Pods-MenuBarTimer-dummy.m */; };
-		BAD48CDF4458256AD94AA34172239F02 /* ProgressImage-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 58B3AB479C41052F3E5080255D33AEEE /* ProgressImage-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C26B85E078FF3E35373F2BE2F19A96DD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF428FC7C7A6555B2B02D8E238C8D8F2 /* Cocoa.framework */; };
-		DF808CD4D6190A5BC25A873AB2AF9A57 /* ProgressMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B91A0A5B147F4AEA007D622053E0AE /* ProgressMenuItem.swift */; };
+		2296C58B46C6B299016BC74758C14277 /* NSColor+Customize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736378E26674178DD321B453FBAB0D53 /* NSColor+Customize.swift */; };
+		3D321610AEA4CDB259D9804A045241D4 /* ProgressImage-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 196EA4A6DB01197C262FF8C3E101DA2F /* ProgressImage-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5DB87816BA22EC450E3C202234E879F5 /* Pods-MenuBarTimer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D6172EFAD4DDAAD4721D106DDE5FF1C /* Pods-MenuBarTimer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		68D5E4B22EAE838AC19820C2B9C07C06 /* ProgressImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F9C867F655DD52535380653236EE6C /* ProgressImage.swift */; };
+		915FB998799D72CF3B0D1D2ADE92E76A /* ProgressImage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 659A18F73A18F4AE7568108382CA8181 /* ProgressImage-dummy.m */; };
+		9307808B8D9DBAABF446149ED0CA3D64 /* ProgressMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A83406FD4F9714B07D429F8B767D131 /* ProgressMenuItem.swift */; };
+		9BED118E83559B2ACE02EE304A780FEF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2AFE638F59E262D940905854A013372 /* Cocoa.framework */; };
+		9DC94DE00C48EC4F389DCCA4C81DB47F /* ProgressImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05B9D8230CB4E9BACD0AC23BA96BA53 /* ProgressImageView.swift */; };
+		9ED18D10B58F55DA069B9250F52842D3 /* Pods-MenuBarTimer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 53AB601CCE268A967C42CE91213AECDC /* Pods-MenuBarTimer-dummy.m */; };
+		FA88B7DBF6D887F31316580E62F00A77 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2AFE638F59E262D940905854A013372 /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		CAAB4B8C3EE816A5090E4197EC11A7F3 /* PBXContainerItemProxy */ = {
+		94FE9815CF91AA631224172C92D7297C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = E336C40118F9ACEAC1BD57CE5DB23D62;
+			remoteGlobalIDString = 4D7510A9EE6198FA64A938D74671AE33;
 			remoteInfo = ProgressImage;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1028BA7E11C514615D1FD746DD238488 /* Pods-MenuBarTimer-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MenuBarTimer-acknowledgements.plist"; sourceTree = "<group>"; };
-		14F35321AA31BA0DD08F1A31DFB56A4F /* Pods-MenuBarTimer-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MenuBarTimer-frameworks.sh"; sourceTree = "<group>"; };
-		218A7B94FE1181BE712992BAFAFC3927 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		26BDBDA6888D41C24F5EEBD203338B08 /* ProgressImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ProgressImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		47A65E391CEC561D91EE33B0FBB8855F /* Pods-MenuBarTimer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MenuBarTimer-umbrella.h"; sourceTree = "<group>"; };
-		49C75CF436E36F9918FD88C4A23A472D /* Pods-MenuBarTimer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MenuBarTimer.release.xcconfig"; sourceTree = "<group>"; };
-		58B3AB479C41052F3E5080255D33AEEE /* ProgressImage-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ProgressImage-umbrella.h"; sourceTree = "<group>"; };
-		6330E88DE33C9891258971E66FC1236D /* Pods-MenuBarTimer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MenuBarTimer.modulemap"; sourceTree = "<group>"; };
-		8C5307EF82A46A19B193B5265D784F67 /* ProgressImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProgressImageView.swift; path = Source/ProgressImageView.swift; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		AC159E3C44AE72F8420315A8E924A894 /* Pods-MenuBarTimer-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MenuBarTimer-resources.sh"; sourceTree = "<group>"; };
-		AE851D92B9AA85862DECE5CC6780D44B /* ProgressImage.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ProgressImage.modulemap; sourceTree = "<group>"; };
-		B201D53FC8C9D5B87008DC0CCBAAC6C5 /* Pods_MenuBarTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MenuBarTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B46480E9F6E10004EE7210427288F9FC /* ProgressImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProgressImage.swift; path = Source/ProgressImage.swift; sourceTree = "<group>"; };
-		B57C903785B3DF9EA142E0BC17835FA9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B81347152D741614508A37D57F75598F /* Pods-MenuBarTimer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MenuBarTimer.debug.xcconfig"; sourceTree = "<group>"; };
-		BA757846DD01D739BCC6D823A99F9FA6 /* Pods-MenuBarTimer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MenuBarTimer-dummy.m"; sourceTree = "<group>"; };
-		CC49378EE95EBD8736CC7EF26EE37345 /* Pods-MenuBarTimer-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MenuBarTimer-acknowledgements.markdown"; sourceTree = "<group>"; };
-		DF428FC7C7A6555B2B02D8E238C8D8F2 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
-		E1C370FA72CA141A41A60EB92B9C768B /* ProgressImage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ProgressImage.xcconfig; sourceTree = "<group>"; };
-		E7FE5F7C04C6336BFF7E649F6558C12B /* ProgressImage-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ProgressImage-prefix.pch"; sourceTree = "<group>"; };
-		F3B91A0A5B147F4AEA007D622053E0AE /* ProgressMenuItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProgressMenuItem.swift; path = Source/ProgressMenuItem.swift; sourceTree = "<group>"; };
-		F6CEA25116F9BC6B866EA83216968DD5 /* ProgressImage-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ProgressImage-dummy.m"; sourceTree = "<group>"; };
+		0D6172EFAD4DDAAD4721D106DDE5FF1C /* Pods-MenuBarTimer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MenuBarTimer-umbrella.h"; sourceTree = "<group>"; };
+		17F9C867F655DD52535380653236EE6C /* ProgressImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProgressImage.swift; path = Source/ProgressImage.swift; sourceTree = "<group>"; };
+		196EA4A6DB01197C262FF8C3E101DA2F /* ProgressImage-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ProgressImage-umbrella.h"; sourceTree = "<group>"; };
+		26BDBDA6888D41C24F5EEBD203338B08 /* ProgressImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ProgressImage.framework; path = ProgressImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		44B4C7F30865E68CB30F91D012E34974 /* ProgressImage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ProgressImage.xcconfig; sourceTree = "<group>"; };
+		53AB601CCE268A967C42CE91213AECDC /* Pods-MenuBarTimer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MenuBarTimer-dummy.m"; sourceTree = "<group>"; };
+		5662600639840FF29279809106E37B53 /* Pods-MenuBarTimer-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MenuBarTimer-frameworks.sh"; sourceTree = "<group>"; };
+		652E2CAA1BF4F0C041B56E0C9CE2AB17 /* Pods-MenuBarTimer-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MenuBarTimer-Info.plist"; sourceTree = "<group>"; };
+		659A18F73A18F4AE7568108382CA8181 /* ProgressImage-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ProgressImage-dummy.m"; sourceTree = "<group>"; };
+		68D06E3F9E8FB7C0CB70B57F70F997DE /* Pods-MenuBarTimer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MenuBarTimer.debug.xcconfig"; sourceTree = "<group>"; };
+		69AD2BAE6D5CA9B0CC7638EE4E91D6F1 /* Pods-MenuBarTimer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MenuBarTimer.modulemap"; sourceTree = "<group>"; };
+		6A83406FD4F9714B07D429F8B767D131 /* ProgressMenuItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProgressMenuItem.swift; path = Source/ProgressMenuItem.swift; sourceTree = "<group>"; };
+		736378E26674178DD321B453FBAB0D53 /* NSColor+Customize.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSColor+Customize.swift"; path = "Source/NSColor+Customize.swift"; sourceTree = "<group>"; };
+		7757176F7110867AE107B1CFF3DB6624 /* ProgressImage-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ProgressImage-Info.plist"; sourceTree = "<group>"; };
+		78389ABD2B0BC39E6F06EA4CF856FEB4 /* Pods-MenuBarTimer-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MenuBarTimer-acknowledgements.markdown"; sourceTree = "<group>"; };
+		7C4A3CB7EB0A3039F948EE5349DDEF68 /* Pods-MenuBarTimer-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MenuBarTimer-acknowledgements.plist"; sourceTree = "<group>"; };
+		7C83009D2FCB046EF7A65B7B4DA2B8B1 /* Pods-MenuBarTimer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MenuBarTimer.release.xcconfig"; sourceTree = "<group>"; };
+		ABEA7D511701E72E56D06DD1160BA7CC /* ProgressImage.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ProgressImage.modulemap; sourceTree = "<group>"; };
+		B201D53FC8C9D5B87008DC0CCBAAC6C5 /* Pods_MenuBarTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MenuBarTimer.framework; path = "Pods-MenuBarTimer.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B36AB396275697EEE1A5B13BA8A38FE3 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		DD2F8CE95A2532F2F3599F4CE41D0EAE /* ProgressImage-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ProgressImage-prefix.pch"; sourceTree = "<group>"; };
+		E05B9D8230CB4E9BACD0AC23BA96BA53 /* ProgressImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProgressImageView.swift; path = Source/ProgressImageView.swift; sourceTree = "<group>"; };
+		F2AFE638F59E262D940905854A013372 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0B9D9C80BF100FEF299BA7E6FFBEF7F5 /* Frameworks */ = {
+		01A822452B9AACC30E0D18A87B91C019 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C9903273067F2A87EED12136C0D93C6 /* Cocoa.framework in Frameworks */,
+				FA88B7DBF6D887F31316580E62F00A77 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F108412BDC91E201D4406D263F82BE02 /* Frameworks */ = {
+		2B32AD30C93E928845A1C8A9105164E3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C26B85E078FF3E35373F2BE2F19A96DD /* Cocoa.framework in Frameworks */,
+				9BED118E83559B2ACE02EE304A780FEF /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1481EDCB9DE11553497ECF2442ADF7E0 /* Pods-MenuBarTimer */ = {
+		279DA19E8EFC6261D3B0E5579B52CBEC /* Pods-MenuBarTimer */ = {
 			isa = PBXGroup;
 			children = (
-				B57C903785B3DF9EA142E0BC17835FA9 /* Info.plist */,
-				6330E88DE33C9891258971E66FC1236D /* Pods-MenuBarTimer.modulemap */,
-				CC49378EE95EBD8736CC7EF26EE37345 /* Pods-MenuBarTimer-acknowledgements.markdown */,
-				1028BA7E11C514615D1FD746DD238488 /* Pods-MenuBarTimer-acknowledgements.plist */,
-				BA757846DD01D739BCC6D823A99F9FA6 /* Pods-MenuBarTimer-dummy.m */,
-				14F35321AA31BA0DD08F1A31DFB56A4F /* Pods-MenuBarTimer-frameworks.sh */,
-				AC159E3C44AE72F8420315A8E924A894 /* Pods-MenuBarTimer-resources.sh */,
-				47A65E391CEC561D91EE33B0FBB8855F /* Pods-MenuBarTimer-umbrella.h */,
-				B81347152D741614508A37D57F75598F /* Pods-MenuBarTimer.debug.xcconfig */,
-				49C75CF436E36F9918FD88C4A23A472D /* Pods-MenuBarTimer.release.xcconfig */,
+				69AD2BAE6D5CA9B0CC7638EE4E91D6F1 /* Pods-MenuBarTimer.modulemap */,
+				78389ABD2B0BC39E6F06EA4CF856FEB4 /* Pods-MenuBarTimer-acknowledgements.markdown */,
+				7C4A3CB7EB0A3039F948EE5349DDEF68 /* Pods-MenuBarTimer-acknowledgements.plist */,
+				53AB601CCE268A967C42CE91213AECDC /* Pods-MenuBarTimer-dummy.m */,
+				5662600639840FF29279809106E37B53 /* Pods-MenuBarTimer-frameworks.sh */,
+				652E2CAA1BF4F0C041B56E0C9CE2AB17 /* Pods-MenuBarTimer-Info.plist */,
+				0D6172EFAD4DDAAD4721D106DDE5FF1C /* Pods-MenuBarTimer-umbrella.h */,
+				68D06E3F9E8FB7C0CB70B57F70F997DE /* Pods-MenuBarTimer.debug.xcconfig */,
+				7C83009D2FCB046EF7A65B7B4DA2B8B1 /* Pods-MenuBarTimer.release.xcconfig */,
 			);
 			name = "Pods-MenuBarTimer";
 			path = "Target Support Files/Pods-MenuBarTimer";
 			sourceTree = "<group>";
 		};
-		37AA93025371A52369B371FD8A6CEB3E /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				218A7B94FE1181BE712992BAFAFC3927 /* Info.plist */,
-				AE851D92B9AA85862DECE5CC6780D44B /* ProgressImage.modulemap */,
-				E1C370FA72CA141A41A60EB92B9C768B /* ProgressImage.xcconfig */,
-				F6CEA25116F9BC6B866EA83216968DD5 /* ProgressImage-dummy.m */,
-				E7FE5F7C04C6336BFF7E649F6558C12B /* ProgressImage-prefix.pch */,
-				58B3AB479C41052F3E5080255D33AEEE /* ProgressImage-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/ProgressImage";
-			sourceTree = "<group>";
-		};
 		39E9EE8210D861DFD82346C1F5EB7218 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FA7AC8429882A95AA0810A9DCDED54FF /* OS X */,
+				E0A0F44171C587A61184070F950DD686 /* OS X */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		534D92E113205B0F291471A601500724 /* Pods */ = {
+		4F4C0D21F4B0B8537617B0FFBD7F9CCD /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				E5D494A540C848A2E0AEF6CD2D34CB75 /* ProgressImage */,
+				ABEA7D511701E72E56D06DD1160BA7CC /* ProgressImage.modulemap */,
+				44B4C7F30865E68CB30F91D012E34974 /* ProgressImage.xcconfig */,
+				659A18F73A18F4AE7568108382CA8181 /* ProgressImage-dummy.m */,
+				7757176F7110867AE107B1CFF3DB6624 /* ProgressImage-Info.plist */,
+				DD2F8CE95A2532F2F3599F4CE41D0EAE /* ProgressImage-prefix.pch */,
+				196EA4A6DB01197C262FF8C3E101DA2F /* ProgressImage-umbrella.h */,
 			);
-			name = Pods;
+			name = "Support Files";
+			path = "../Target Support Files/ProgressImage";
 			sourceTree = "<group>";
 		};
 		6D2820C7285BBFA8652298ADFEE365BC /* Products */ = {
@@ -131,40 +123,50 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7DB346D0F39D3F0E887471402A8071AB = {
+		72C853F5253507C74957E47E25A7BE0D /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				39E9EE8210D861DFD82346C1F5EB7218 /* Frameworks */,
-				534D92E113205B0F291471A601500724 /* Pods */,
-				6D2820C7285BBFA8652298ADFEE365BC /* Products */,
-				D5750F071370BCE3D28886830546CC94 /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		D5750F071370BCE3D28886830546CC94 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				1481EDCB9DE11553497ECF2442ADF7E0 /* Pods-MenuBarTimer */,
+				279DA19E8EFC6261D3B0E5579B52CBEC /* Pods-MenuBarTimer */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		E5D494A540C848A2E0AEF6CD2D34CB75 /* ProgressImage */ = {
+		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
-				B46480E9F6E10004EE7210427288F9FC /* ProgressImage.swift */,
-				8C5307EF82A46A19B193B5265D784F67 /* ProgressImageView.swift */,
-				F3B91A0A5B147F4AEA007D622053E0AE /* ProgressMenuItem.swift */,
-				37AA93025371A52369B371FD8A6CEB3E /* Support Files */,
+				B36AB396275697EEE1A5B13BA8A38FE3 /* Podfile */,
+				39E9EE8210D861DFD82346C1F5EB7218 /* Frameworks */,
+				C41996092694BB28FC2E1769B4AE9BC1 /* Pods */,
+				6D2820C7285BBFA8652298ADFEE365BC /* Products */,
+				72C853F5253507C74957E47E25A7BE0D /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		879728177733CE8A2026BDE640F29EB7 /* ProgressImage */ = {
+			isa = PBXGroup;
+			children = (
+				736378E26674178DD321B453FBAB0D53 /* NSColor+Customize.swift */,
+				17F9C867F655DD52535380653236EE6C /* ProgressImage.swift */,
+				E05B9D8230CB4E9BACD0AC23BA96BA53 /* ProgressImageView.swift */,
+				6A83406FD4F9714B07D429F8B767D131 /* ProgressMenuItem.swift */,
+				4F4C0D21F4B0B8537617B0FFBD7F9CCD /* Support Files */,
+			);
+			name = ProgressImage;
 			path = ProgressImage;
 			sourceTree = "<group>";
 		};
-		FA7AC8429882A95AA0810A9DCDED54FF /* OS X */ = {
+		C41996092694BB28FC2E1769B4AE9BC1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				DF428FC7C7A6555B2B02D8E238C8D8F2 /* Cocoa.framework */,
+				879728177733CE8A2026BDE640F29EB7 /* ProgressImage */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E0A0F44171C587A61184070F950DD686 /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				F2AFE638F59E262D940905854A013372 /* Cocoa.framework */,
 			);
 			name = "OS X";
 			sourceTree = "<group>";
@@ -172,32 +174,33 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		04802921C0DEDFD1967B993EA0BCE6D6 /* Headers */ = {
+		01C447FFB8A43F5553D456E951E492FC /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				407C05ED40349FE7A60AD928CF830630 /* Pods-MenuBarTimer-umbrella.h in Headers */,
+				5DB87816BA22EC450E3C202234E879F5 /* Pods-MenuBarTimer-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		098F437544915A7607F3A1289A140BE1 /* Headers */ = {
+		1BAE4B2C3312AA8DB9C5895015443780 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BAD48CDF4458256AD94AA34172239F02 /* ProgressImage-umbrella.h in Headers */,
+				3D321610AEA4CDB259D9804A045241D4 /* ProgressImage-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		E336C40118F9ACEAC1BD57CE5DB23D62 /* ProgressImage */ = {
+		4D7510A9EE6198FA64A938D74671AE33 /* ProgressImage */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 53399C5EC83017B39F479ADD1FC973CD /* Build configuration list for PBXNativeTarget "ProgressImage" */;
+			buildConfigurationList = 4CA83B64EDD59C7688BE3BF09D3EFA86 /* Build configuration list for PBXNativeTarget "ProgressImage" */;
 			buildPhases = (
-				23101B68F8EB6FE8005B73C08A4AA731 /* Sources */,
-				F108412BDC91E201D4406D263F82BE02 /* Frameworks */,
-				098F437544915A7607F3A1289A140BE1 /* Headers */,
+				1BAE4B2C3312AA8DB9C5895015443780 /* Headers */,
+				6C3EF35A6649314ADA9DE13059E09C40 /* Sources */,
+				01A822452B9AACC30E0D18A87B91C019 /* Frameworks */,
+				A70F65C7007741BC92E420EFF0A4358F /* Resources */,
 			);
 			buildRules = (
 			);
@@ -208,18 +211,19 @@
 			productReference = 26BDBDA6888D41C24F5EEBD203338B08 /* ProgressImage.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		F1485F30B83C0C00CE89C0C7A5E73DB9 /* Pods-MenuBarTimer */ = {
+		996BCF6DFD429E6721B56F32B0A13C09 /* Pods-MenuBarTimer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D528841ED716BA5ABF4AD83E05ED537C /* Build configuration list for PBXNativeTarget "Pods-MenuBarTimer" */;
+			buildConfigurationList = 8CB4786E461399CEC13A8BDAD3B5AE51 /* Build configuration list for PBXNativeTarget "Pods-MenuBarTimer" */;
 			buildPhases = (
-				873D05BAEC302189E4E5986F6CA7F27D /* Sources */,
-				0B9D9C80BF100FEF299BA7E6FFBEF7F5 /* Frameworks */,
-				04802921C0DEDFD1967B993EA0BCE6D6 /* Headers */,
+				01C447FFB8A43F5553D456E951E492FC /* Headers */,
+				77A53F5687F8A5454A4A1B0F2D4824A0 /* Sources */,
+				2B32AD30C93E928845A1C8A9105164E3 /* Frameworks */,
+				69673B4059B6ED2DEA7B57DCE4F3DDC3 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D622E4BF5E99312ACF3EBD7A89F5CED4 /* PBXTargetDependency */,
+				B464F3109929F1936111262BE8B8283D /* PBXTargetDependency */,
 			);
 			name = "Pods-MenuBarTimer";
 			productName = "Pods-MenuBarTimer";
@@ -233,7 +237,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 0930;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -247,84 +251,67 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F1485F30B83C0C00CE89C0C7A5E73DB9 /* Pods-MenuBarTimer */,
-				E336C40118F9ACEAC1BD57CE5DB23D62 /* ProgressImage */,
+				996BCF6DFD429E6721B56F32B0A13C09 /* Pods-MenuBarTimer */,
+				4D7510A9EE6198FA64A938D74671AE33 /* ProgressImage */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXSourcesBuildPhase section */
-		23101B68F8EB6FE8005B73C08A4AA731 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
+/* Begin PBXResourcesBuildPhase section */
+		69673B4059B6ED2DEA7B57DCE4F3DDC3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61D829B0EC2B19AE50E71D0AD0D095C7 /* ProgressImage-dummy.m in Sources */,
-				9CD723785B0685D8F43701935FA085A2 /* ProgressImage.swift in Sources */,
-				681826183C14AEF97934B6B72D5F796D /* ProgressImageView.swift in Sources */,
-				DF808CD4D6190A5BC25A873AB2AF9A57 /* ProgressMenuItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		873D05BAEC302189E4E5986F6CA7F27D /* Sources */ = {
+		A70F65C7007741BC92E420EFF0A4358F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6C3EF35A6649314ADA9DE13059E09C40 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0400C1E38CB2AADABE87C94A937DE1C /* Pods-MenuBarTimer-dummy.m in Sources */,
+				2296C58B46C6B299016BC74758C14277 /* NSColor+Customize.swift in Sources */,
+				915FB998799D72CF3B0D1D2ADE92E76A /* ProgressImage-dummy.m in Sources */,
+				68D5E4B22EAE838AC19820C2B9C07C06 /* ProgressImage.swift in Sources */,
+				9DC94DE00C48EC4F389DCCA4C81DB47F /* ProgressImageView.swift in Sources */,
+				9307808B8D9DBAABF446149ED0CA3D64 /* ProgressMenuItem.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77A53F5687F8A5454A4A1B0F2D4824A0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9ED18D10B58F55DA069B9250F52842D3 /* Pods-MenuBarTimer-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		D622E4BF5E99312ACF3EBD7A89F5CED4 /* PBXTargetDependency */ = {
+		B464F3109929F1936111262BE8B8283D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = ProgressImage;
-			target = E336C40118F9ACEAC1BD57CE5DB23D62 /* ProgressImage */;
-			targetProxy = CAAB4B8C3EE816A5090E4197EC11A7F3 /* PBXContainerItemProxy */;
+			target = 4D7510A9EE6198FA64A938D74671AE33 /* ProgressImage */;
+			targetProxy = 94FE9815CF91AA631224172C92D7297C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0A56C0739F0FF8E81FEE7949FE346601 /* Release */ = {
+		1E8A2B60B0DFE5A68863E764B349827F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 49C75CF436E36F9918FD88C4A23A472D /* Pods-MenuBarTimer.release.xcconfig */;
+			baseConfigurationReference = 44B4C7F30865E68CB30F91D012E34974 /* ProgressImage.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "Target Support Files/Pods-MenuBarTimer/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MODULEMAP_FILE = "Target Support Files/Pods-MenuBarTimer/Pods-MenuBarTimer.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		0C843F544FCD5F31A07BBCBFD09BD33F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E1C370FA72CA141A41A60EB92B9C768B /* ProgressImage.xcconfig */;
-			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -338,102 +325,13 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
 				GCC_PREFIX_HEADER = "Target Support Files/ProgressImage/ProgressImage-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ProgressImage/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/ProgressImage/ProgressImage-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MODULEMAP_FILE = "Target Support Files/ProgressImage/ProgressImage.modulemap";
-				PRODUCT_MODULE_NAME = ProgressImage;
-				PRODUCT_NAME = ProgressImage;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		10E850B85F3451D5157989C3751F075F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_ALLOWED = NO;
-				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
+				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
 				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Release;
-		};
-		747D66FB9F3ECF4243CAA84614995228 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E1C370FA72CA141A41A60EB92B9C768B /* ProgressImage.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				GCC_PREFIX_HEADER = "Target Support Files/ProgressImage/ProgressImage-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ProgressImage/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MODULEMAP_FILE = "Target Support Files/ProgressImage/ProgressImage.modulemap";
 				PRODUCT_MODULE_NAME = ProgressImage;
@@ -441,51 +339,13 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		95DC9EAFE589658C4364C9314F059CB3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B81347152D741614508A37D57F75598F /* Pods-MenuBarTimer.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "Target Support Files/Pods-MenuBarTimer/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MODULEMAP_FILE = "Target Support Files/Pods-MenuBarTimer/Pods-MenuBarTimer.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		D5B651532ED11AFBC5E147B64848AFB4 /* Debug */ = {
+		47398CAF40B1A25F32FCD4AFB3809A5B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -517,8 +377,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_ALLOWED = NO;
-				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -539,14 +397,195 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
+		};
+		6C00C1F917CB0FABF84D54391A1987AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C83009D2FCB046EF7A65B7B4DA2B8B1 /* Pods-MenuBarTimer.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods-MenuBarTimer/Pods-MenuBarTimer-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/Pods-MenuBarTimer/Pods-MenuBarTimer.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		766FB99DD03F220B6C60E7C6A9916B14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68D06E3F9E8FB7C0CB70B57F70F997DE /* Pods-MenuBarTimer.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods-MenuBarTimer/Pods-MenuBarTimer-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/Pods-MenuBarTimer/Pods-MenuBarTimer.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		80221A110527E70B4A72558F2CC86AF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		DA766C5A60D335609E021DE4028F07BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44B4C7F30865E68CB30F91D012E34974 /* ProgressImage.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/ProgressImage/ProgressImage-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ProgressImage/ProgressImage-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/ProgressImage/ProgressImage.modulemap";
+				PRODUCT_MODULE_NAME = ProgressImage;
+				PRODUCT_NAME = ProgressImage;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
@@ -554,26 +593,26 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D5B651532ED11AFBC5E147B64848AFB4 /* Debug */,
-				10E850B85F3451D5157989C3751F075F /* Release */,
+				47398CAF40B1A25F32FCD4AFB3809A5B /* Debug */,
+				80221A110527E70B4A72558F2CC86AF3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		53399C5EC83017B39F479ADD1FC973CD /* Build configuration list for PBXNativeTarget "ProgressImage" */ = {
+		4CA83B64EDD59C7688BE3BF09D3EFA86 /* Build configuration list for PBXNativeTarget "ProgressImage" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				747D66FB9F3ECF4243CAA84614995228 /* Debug */,
-				0C843F544FCD5F31A07BBCBFD09BD33F /* Release */,
+				1E8A2B60B0DFE5A68863E764B349827F /* Debug */,
+				DA766C5A60D335609E021DE4028F07BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D528841ED716BA5ABF4AD83E05ED537C /* Build configuration list for PBXNativeTarget "Pods-MenuBarTimer" */ = {
+		8CB4786E461399CEC13A8BDAD3B5AE51 /* Build configuration list for PBXNativeTarget "Pods-MenuBarTimer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				95DC9EAFE589658C4364C9314F059CB3 /* Debug */,
-				0A56C0739F0FF8E81FEE7949FE346601 /* Release */,
+				766FB99DD03F220B6C60E7C6A9916B14 /* Debug */,
+				6C00C1F917CB0FABF84D54391A1987AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
