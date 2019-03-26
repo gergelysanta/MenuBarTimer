@@ -2,7 +2,7 @@
 
 [![Xcode 9](https://img.shields.io/badge/Xcode-10-blue.svg)](https://developer.apple.com/xcode/)
 [![Swift 4](https://img.shields.io/badge/Swift-4-blue.svg)](https://swift.org/)
-[![Platform](https://img.shields.io/badge/platforms-macOS-blue.svg)](https://developer.apple.com/platforms/)
+[![Platform](https://img.shields.io/badge/platforms-macOS-blue.svg)](https://developer.apple.com/macOS)
 
 Small macOS menubar tool with timer functionality.
 
